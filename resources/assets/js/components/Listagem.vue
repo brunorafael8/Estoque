@@ -6,6 +6,11 @@
         <td>{{ valor }}</td>
         <td>{{ descricao }}</td>
         <td>{{ quantidade }}</td>
+        <td> 
+          <a :href="link">
+            <span class="glyphicon glyphicon-search"></span>
+          </a>
+        </td>
       </tr>
     </table>
   </div>
@@ -29,6 +34,10 @@
           quantidade: {
               type: String, 
               required: true
+          },
+          link: {
+            type: String, 
+            required: true
           }
         }
     }

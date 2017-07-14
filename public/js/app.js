@@ -42037,7 +42037,7 @@ exports = module.exports = __webpack_require__(43)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -42397,6 +42397,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: {
@@ -42415,6 +42420,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         quantidade: {
             type: String,
             required: true
+        },
+        link: {
+            type: String,
+            required: true
         }
     }
 });
@@ -42428,7 +42437,13 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "container"
   }, [_c('table', {
     staticClass: "table table-striped table-bordered table-hover"
-  }, [_c('tr', [_c('td', [_vm._v(_vm._s(_vm.nome))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(_vm.valor))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(_vm.descricao))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(_vm.quantidade))])])])])
+  }, [_c('tr', [_c('td', [_vm._v(_vm._s(_vm.nome))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(_vm.valor))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(_vm.descricao))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(_vm.quantidade))]), _vm._v(" "), _c('td', [_c('a', {
+    attrs: {
+      "href": _vm.link
+    }
+  }, [_c('span', {
+    staticClass: "glyphicon glyphicon-search"
+  })])])])])])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {

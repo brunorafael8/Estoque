@@ -8,6 +8,7 @@
              valor="<?= $p->valor ?>" 
              descricao="<?= $p->descricao ?>"
              quantidade="<?= $p->quantidade ?>"
+             link="/produtos/mostra/<?= $p->id ?>"
              ></listagem> 
         <?php endforeach ?>
     </div>
