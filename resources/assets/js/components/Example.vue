@@ -1,20 +1,23 @@
 <template>
-  <div class="container"> 
-    <h1>Listagem de produtos</h1>
-    <table class="table table-striped table-bordered table-hover">
-      <?php foreach ($produtos as $p): ?>
-      <tr>
-        <td><?= $p->nome ?></td>
-        <td><?= $p->valor ?></td>
-        <td><?= $p->descricao ?></td>
-        <td><?= $p->quantidade ?></td>
-      </tr>
-      <?php endforeach ?>
-    </table>
-  </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Example Component</div>
+
+                    <div class="panel-body">
+                        I'm an example component!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </template>
 
 <script>
     export default {
+        mounted() {
+            console.log('Component mounted.')
+        }
     }
 </script>
