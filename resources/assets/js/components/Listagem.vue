@@ -1,7 +1,7 @@
 <template>
-  <div class="container"> 
+  <div> 
     <table class="table table-striped table-bordered table-hover">
-      <tr>
+      <tr :class="classe">
         <td>{{ nome }}</td>
         <td>{{ valor }}</td>
         <td>{{ descricao }}</td>
@@ -14,6 +14,7 @@
       </tr>
     </table>
   </div>
+  
 </template>
 
 <script>
@@ -37,6 +38,10 @@
           },
           link: {
             type: String, 
+            required: true
+          },
+          classe: { 
+            type: String,
             required: true
           }
         }

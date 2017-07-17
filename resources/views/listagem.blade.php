@@ -1,15 +1,23 @@
 @extends('layouts.app')
 
 @section('content')
+ @if(empty($produtos))
+  <div>Você não tem nenhum produto cadastrado.</div>
+
+   @else
     <div class="container">
         <h1>Listagem de produtos</h1>
-        <?php foreach ($produtos as $p): ?>
-            <listagem nome="<?= $p->nome ?>"
-             valor="<?= $p->valor ?>" 
-             descricao="<?= $p->descricao ?>"
-             quantidade="<?= $p->quantidade ?>"
-             link="/produtos/mostra/<?= $p->id ?>"
+        @foreach ($produtos as $p)
+            <listagem 
+			    classe="{{$p->quantidade<=1 ? 'danger' : '' }}"
+            	nome="{{$p->nome}}"
+             	descricao="{{$p->descricao}}"
+             	link="/produtos/mostra/{{$p->id}}"
+             	quantidade="{{$p->quantidade}}"
+             	valor="{{$p->valor}}" 
              ></listagem> 
-        <?php endforeach ?>
+        @endforeach
     </div>
+    
+    @endif
 @endsection
