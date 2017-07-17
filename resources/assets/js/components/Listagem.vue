@@ -1,51 +1,45 @@
 <template>
-  <div> 
-    <table class="table table-striped table-bordered table-hover">
-      <tr :class="classe">
-        <td>{{ nome }}</td>
-        <td>{{ valor }}</td>
-        <td>{{ descricao }}</td>
-        <td>{{ quantidade }}</td>
-        <td> 
-          <a :href="link">
-            <span class="glyphicon glyphicon-search"></span>
-          </a>
-        </td>
-      </tr>
-    </table>
-  </div>
-  
+	<div> 
+		<table class="table table-striped table-bordered table-hover">
+			<thead>
+				<tr>
+					<th>Nome</th>
+					<th>Valor</th>
+					<th>Descrição</th>
+					<th>Quantidade</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr :key="produtos.id" v-for="produto of produtos" class="">
+					<td>{{ produto.nome }}</td>
+					<td>{{ produto.valor }}</td>
+					<td>{{ produto.descricao }}</td>
+					<td>{{ produto.quantidade }}</td>
+					<td> 
+						<a>
+							<span class="glyphicon glyphicon-search"></span>
+						</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	
 </template>
 
 <script>
-    export default {
-        props: {
-          nome: {
-              type: String, 
-              required: true
-          },
-          valor: {
-              type: String, 
-              required: true
-          },
-          descricao: {
-              type: String, 
-              required: true
-          },
-          quantidade: {
-              type: String, 
-              required: true
-          },
-          link: {
-            type: String, 
-            required: true
-          },
-          classe: { 
-            type: String,
-            required: true
-          }
-        }
-    }
+		export default {
+			data () {
+				return {
+					produtos: []
+				}
+			},
+			mounted () {
+				axios.get('/produtos/json').then(produtos => {
+						this.produtos = produtos.data;
+				});
+			}
+		}
 </script>
 <style> 
 

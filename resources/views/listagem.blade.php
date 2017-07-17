@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
- @if(empty($produtos))
+ {{--  @if(empty($produtos))
   <div>Você não tem nenhum produto cadastrado.</div>
 
    @else
@@ -24,5 +24,6 @@
             O produto {{ old('nome') }} foi adicionado.
     </div>
     @endif
-    @endif
+    @endif  --}}
+    <listagem></listagem>
 @endsection
