@@ -2,8 +2,8 @@
 
 @section('content')
 
-    <div class="alert alert-success">
-        <strong>Sucesso!</strong> O produto {{$nome}} foi adicionado.
-    </div>
+		<div class="alert alert-success">
+				<strong>Sucesso!</strong> O produto {{$nome}} foi adicionado.
+		</div>
 
 @endsection
