@@ -16,7 +16,7 @@
 					<td>{{ produto.descricao }}</td>
 					<td>{{ produto.quantidade }}</td>
 					<td> 
-						<a>
+						<a :href="`/produtos/mostra/${produto.id}`">
 							<span class="glyphicon glyphicon-search"></span>
 						</a>
 					</td>
