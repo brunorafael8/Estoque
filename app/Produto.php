@@ -8,7 +8,7 @@
         public $timestamps = false;
 
         protected $fillable = array('nome', 
-            'descricao', 'valor', 'quantidade');
+            'descricao', 'quantidade', 'valor', 'tamanho');
 
         protected $guarded = ['id'];
     }
