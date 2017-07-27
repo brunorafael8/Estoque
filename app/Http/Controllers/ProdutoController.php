@@ -2,13 +2,14 @@
 
 use Illuminate\Support\Facades\DB;
 use estoque\Produto;
+use estoque\Categoria;
 use Request;
 use estoque\Http\Requests\ProdutosRequest;
 use estoque\Http\Middleware\AutorizacaoMiddleware;
 
 class ProdutoController extends Controller {
     public function __construct(){
-        $this->middleware('auth');
+        $this->middleware('auth', ['only' => ['adiciona', 'remove']]);
     }
 
     public function lista(){
@@ -31,7 +32,7 @@ class ProdutoController extends Controller {
             ->action('ProdutoController@lista');
     }
     public function novo(){
-        return view('produto.formulario');
+        return view('produto.formulario')->with('categorias', Categoria::all());
     }
     public function adiciona(ProdutosRequest $request){
 

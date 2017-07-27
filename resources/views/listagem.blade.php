@@ -26,4 +26,7 @@
     @endif
     @endif  --}}
     <listagem></listagem>
+    @foreach ($produtos as $p)
+    <h1> {{ $p->categoria->nome }}</h1>
+    @endforeach
 @endsection

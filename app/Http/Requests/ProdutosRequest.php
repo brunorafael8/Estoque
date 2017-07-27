@@ -13,7 +13,7 @@ class ProdutosRequest extends FormRequest{
           'nome' => 'required|max:100',
           'descricao' => 'required|max:255',
           'valor' => 'required|numeric',
-          'tamanho' => 'required|numeric',
+          'tamanho' => 'required|max:20',
           'quantidade' => 'required|numeric'
         ];
     }

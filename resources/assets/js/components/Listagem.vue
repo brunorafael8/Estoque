@@ -8,6 +8,7 @@
 					<th>Descrição</th>
 					<th>Quantidade</th>
 					<th>Tamanho</th>
+					<th>Categoria</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -16,7 +17,8 @@
 					<td>{{ produto.valor }}</td>
 					<td>{{ produto.descricao }}</td>
 					<td>{{ produto.quantidade }}</td>
-					<td>{{ produto.tamanho }}</td>					
+					<td>{{ produto.tamanho }}</td>	
+					<td>{{ produto.categoria }}</td>				
 					<td> 
 						<a :href="`/produtos/mostra/${produto.id}`">
 							<span class="glyphicon glyphicon-search"></span>

@@ -7,8 +7,10 @@
         protected $table = 'produtos';
         public $timestamps = false;
 
-        protected $fillable = array('nome', 
-            'descricao', 'quantidade', 'valor', 'tamanho');
+        protected $fillable =
+        array('nome', 'descricao', 'quantidade', 'valor', 'tamanho', 'categoria_id', 'categoria');
 
-        protected $guarded = ['id'];
+        public function categoria(){
+            return $this->belongsTo('estoque\Categoria');
+        }
     }
