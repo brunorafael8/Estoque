@@ -3,7 +3,7 @@ let mix = require('laravel-mix');
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
- |--------------------------------------------------------------------------
+ |-------------------------------------s-------------------------------------
  |
  | Mix provides a clean, fluent API for defining some Webpack build steps
  | for your Laravel application. By default, we are compiling the Sass
