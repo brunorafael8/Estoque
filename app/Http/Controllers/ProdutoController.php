@@ -4,8 +4,12 @@ use Illuminate\Support\Facades\DB;
 use estoque\Produto;
 use Request;
 use estoque\Http\Requests\ProdutosRequest;
+use estoque\Http\Middleware\AutorizacaoMiddleware;
 
 class ProdutoController extends Controller {
+    public function __construct(){
+        $this->middleware('auth');
+    }
 
     public function lista(){
 
