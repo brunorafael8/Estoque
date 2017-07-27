@@ -42448,7 +42448,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_vm._m(0), _vm._v(" "), _c('tbody', _vm._l((_vm.produtos), function(produto) {
     return _c('tr', {
       key: _vm.produtos.id
-    }, [_c('td', [_vm._v(_vm._s(produto.nome))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(produto.valor))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(produto.descricao))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(produto.quantidade))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(produto.tamanho))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(produto.categoria))]), _vm._v(" "), _c('td', [_c('a', {
+    }, [_c('td', [_vm._v(_vm._s(produto.nome))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(produto.valor))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(produto.descricao))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(produto.quantidade))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(produto.tamanho))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(produto.categoria_id))]), _vm._v(" "), _c('td', [_c('a', {
       attrs: {
         "href": ("/produtos/mostra/" + (produto.id))
       }
